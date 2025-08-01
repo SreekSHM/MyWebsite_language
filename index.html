@@ -1,361 +1,413 @@
 <!DOCTYPE html>
+<!-- The 'lang' attribute will be updated by JavaScript -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreekanth Buddhiraju Portfolio Website</title>
+    <title>Sreekanth Buddhiraju | Portfolio</title>
+    
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-6s5/mK6e5PON07LrH1CzJcUA6lXEXeoIl2Fbz4zI+1/i5ZpfL+QkF+MJs4+GYYPP" crossorigin="anonymous">
+    
+    <!-- Modern Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/c6ae28cfd0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="header">
+
+<header id="header">
     <div class="container">
         <nav>
-            <img src="images/sb-high-resolution-logo-white-transparent.png" class="logo">
-            <div class="language-switcher">
-                <button id="lang-en" class="lang-btn active-lang">EN</button>
-                <button id="lang-de" class="lang-btn">DE</button>
-            </div>
-            <ul>
-                <li><a href="#header" data-en="Home" data-de="Startseite">Home</a></li>
-                <li><a href="#about" data-en="About" data-de="Über mich">About</a></li>
-                <li><a href="#services" data-en="Specialization" data-de="Spezialisierung">Specialization</a></li>
-                <li><a href="#portfolio" data-en="Portfolio" data-de="Portfolio">Portfolio</a></li>
-                <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
-                <i class="fas fa-xmark"></i>
+            <img src="images/sb-high-resolution-logo-white-transparent.png" alt="Sreekanth Buddhiraju Logo" class="logo">
+            
+            <ul id="sidemenu">
+                <li><a href="#header" data-key="nav_home">Home</a></li>
+                <li><a href="#about" data-key="nav_about">About</a></li>
+                <li><a href="#services" data-key="nav_services">Specialization</a></li>
+                <li><a href="#portfolio" data-key="nav_portfolio">Portfolio</a></li>
+                <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+                <button type="button" class="nav-close-btn" aria-label="Close menu"><i class="fas fa-xmark"></i></button>
             </ul>
-            <i class="fas fa-bars"></i>
+            
+            <div class="nav-right">
+                 <div class="language-switcher">
+                    <button id="lang-en" class="lang-btn active-lang">EN</button>
+                    <button id="lang-de" class="lang-btn">DE</button>
+                </div>
+                <button type="button" class="nav-open-btn" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            </div>
         </nav>
         <div class="header-text">
-            <p data-en="Structural Engineer" data-de="Bauingenieur">Structural Engineer</p>
-            <h1 data-en="Hi, I'm <span>Sreekanth</span><br> Buddhiraju working as a Project Engineer" 
-                data-de="Hallo, ich bin <span>Sreekanth</span><br> Buddhiraju und arbeite als Projektingenieur">
-                Hi, I'm <span>Sreekanth</span><br> Buddhiraju working as a Project Engineer
-            </h1>
+            <p data-key="header_subtitle">Structural Engineer</p>
+            <h1 data-key="header_title">Hi, I'm <span>Sreekanth</span><br> Buddhiraju working as a Project Engineer</h1>
         </div>
     </div>
-</div>
-<!-- about -->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/Sreekanth-Buddhiraju-image.jpg" alt="Sreekanth Buddhiraju">
-            </div>
-            <div class="about-col-2">
-                <h1 data-en="About Me" data-de="Über mich">About Me</h1>
-                <p data-en="Civil engineer with more than 7+ years of experience in structural engineering, project management and construction planning. 
-                    I am always eager to find a better solution method and learn new technologies, tools and language skills when required. 
-                    At present I am working as a Project Engineer in Germany." 
-                    data-de="Bauingenieur mit mehr als 7+ Jahren Erfahrung in Statik, Projektmanagement und Bauplanung. 
-                    Ich bin stets bestrebt, bessere Lösungsmethoden zu finden und neue Technologien, Werkzeuge und Sprachkenntnisse zu erlernen, wenn es erforderlich ist. 
-                    Derzeit arbeite ich als Projektingenieur in Deutschland.">
-                    Civil engineer with more than 7+ years of experience in structural engineering, project management and construction planning. 
-                    I am always eager to find a better solution method and learn new technologies, tools and language skills when required. 
-                    At present I am working as a Project Engineer in Germany.
-                </p>
-             <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('skills', event)" data-en="Skills" data-de="Fähigkeiten">Skills</p>
-                <p class="tab-links" onclick="opentab('experience', event)" data-en="Experience" data-de="Berufserfahrung">Experience</p>
-                <p class="tab-links" onclick="opentab('education', event)" data-en="Education" data-de="Ausbildung">Education</p>
-            </div>
-            <div class="tab-contents active-tab" id="skills">
-            <ul>
-                <li>
-                <span data-en="Structural Engineer" data-de="Statiker">Structural Engineer</span><br>
-                <span style="color: white;" data-en="Bridge Design, Multistorey Buildings, Steel Frame Halls, Pre- and Post-tension, Precast Structures" 
-                  data-de="Brückenbau, Mehrgeschossige Gebäude, Stahlhallen, Vorspannung, Fertigteile">
-                  Bridge Design, Multistorey Buildings, Steel Frame Halls, Pre- and Post-tension, Precast Structures
-                </span>
-                </li>
-                <li>
-            <span data-en="Reinforcement Detail" data-de="Bewehrungsplanung">Reinforcement Detail</span><br>
-            <span style="color: white;" data-en="Reinforcement Detail Drawings using CAD, Reinforcement Material Estimation" 
-                  data-de="Bewehrungspläne mit CAD, Bewehrungsmengenermittlung">
-                  Reinforcement Detail Drawings using CAD, Reinforcement Material Estimation
-            </span>
-            </li>
-            <li>
-            <span data-en="Project planning" data-de="Projektplanung">Project planning</span><br>
-            <span style="color: white;" data-en="Project management, Cost Estimation, BIM-4D and 5D Planning, Plan approval" 
-                  data-de="Projektmanagement, Kostenermittlung, BIM-4D und 5D Planung, Plan Prüfung">
-                  Project management, Cost Estimation, BIM-4D and 5D Planning, Plan approval
-            </span>
-            </li>
-            <li>
-            <span data-en="Foundation Engineering" data-de="Gründungsbau">Foundation Engineering</span><br>
-            <span style="color: white;" data-en="Pilefoundation, Cassionfoundation, Embankments, Shallowfoundations" 
-                  data-de="Bohrpfähl, Cassion-Fundament, Stützwand, Flachgründungen">
-                  Pilefoundation, Cassionfoundation, Embankments, Shallowfoundations
-            </span>
-            </li>
-            </ul>
-            </div>
+</header>
 
-            <div class="tab-contents" id="experience">
-            <ul>
-            <li>
-            <span>2024 - Current</span><br>
-            <span style="color: white;" data-en="Project Engineer at Obermeyer Gmbh" 
-                  data-de="Projektingenieur bei Obermeyer Gmbh">
-                  Project Engineer at Obermeyer Gmbh
-            </span>
-            </li>
-            <li>
-            <span>2022 - 2023</span><br>
-            <span style="color: white;" data-en="Structural Engineer at OK Ingenieur Gmbh & Co." 
-                  data-de="Statiker bei OK Ingenieur Gmbh & Co.">
-                  Structural Engineer at OK Ingenieur Gmbh & Co.
-            </span>
-            </li>
-            <li>
-            <span>2014 - 2018</span><br>
-            <span style="color: white;" data-en="Structural Engineer in India" 
-                  data-de="Statiker in Indien">
-                  Structural Engineer in India
-            </span>
-            </li>
-            </ul>
-            </div>
+<main>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Sreekanth-Buddhiraju-image.jpg" alt="A photo of Sreekanth Buddhiraju">
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title" data-key="about_title">About Me</h2>
+                    <p data-key="about_desc">Civil engineer with more than 7+ years of experience in structural engineering, project management and construction planning. I am always eager to find a better solution method and learn new technologies, tools and language skills when required. At present I am working as a Project Engineer in Germany.</p>
 
-            <div class="tab-contents" id="education">
-            <ul>
-                <li><span>2009-2014</span><br>
-                    <span style="color: white;" data-en="BE+ME in Civil Engineering at Andhra University(A), India" 
-                    data-de="BE+ME in Bauingenieurwesen an der Andhra University(A), Indien">BE+ME in Civil Engineering at Andhra University(A), India</li>
-                <li><span>2018-2021</span><br>
-                    <span style="color: white;" data-en="MSc in Natural Hazards and Risk in Structural Engineering (NHRE) at Bauhaus University, Germany" 
-                    data-de="MSc in Natural Hazards and Risk in Structural Engineering (NHRE) an der Bauhaus-Universität, Deutschland">MSc in Natural Hazards and Risk in Structural Engineering (NHRE) at Bauhaus University, Germany</li>
-            </ul>
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-----------services--------------->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title" data-en="My Specialization" data-de="Meine Spezialisierung">My Specialization</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-bridge"></i>
-                <h2 data-en="Static Design" data-de="Statische Berechnung">Static Design</h2>
-                <p data-en="I have expertise in Static design verification using EC, ASCI and IS-codes for Permanent and Frequent load cases." 
-                    data-de="Ich habe Erfahrung in der statischen Berechnung nach DIN-EN, ASCI und IS-Normen für ständige und häufige Lastfälle.">
-                    I have expertise in Static design verification using EC, ASCI and IS-codes for Permanent and Frequent load cases.
-                </p>
-                <a href="#" data-en="Learn more" data-de="Mehr erfahren">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-bridge fa-shake"></i>
-                <h2 data-en="Dynamic Design" data-de="Dynamische Berechnung">Dynamic Design</h2>
-                <p data-en="I have expertise in Dynamic design verification using EC, ASCI (FEMA) and IS-codes for Dynamic loads like Earthquake- or Wind Induced vibrations." 
-                    data-de="Ich habe Erfahrung in der dynamischen Berechnung nach EC, ASCI (FEMA) und IS-Normen für dynamische Lasten wie Erdbeben- oder windinduzierte Schwingungen.">
-                    I have expertise in Dynamic design verification using EC, ASCI (FEMA) and IS-codes for Dynamic loads like Earthquake- or Wind Induced vibrations.
-                </p>
-                <a href="#" data-en="Learn more" data-de="Mehr erfahren">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-bridge-water"></i>
-                <h2 data-en="Fluid Structure Interaction" data-de="Fluid-Struktur-Interaktion">Fluid Structure Interaction</h2>
-                <p data-en="The study emphasises on real time structure behaviour using water as liquid damper reducing structure vibrations. Fluid damper design is made based on this phenomenon." 
-                    data-de="Die Studie konzentriert sich auf das Echtzeit-Verhalten von Strukturen unter Verwendung von Wasser als Flüssigkeitsdämpfer zur Reduzierung von Strukturschwingungen. Der Flüssigkeitsdämpfer wird auf Basis dieses Phänomens ausgelegt.">
-                    The study emphasises on real time structure behaviour using water as liquid damper reducing structure vibrations. Fluid damper design is made based on this phenomenon.
-                </p>
-                <a href="#" data-en="Learn more" data-de="Mehr erfahren">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!----------portfolio----------------------> 
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title" data-en="My Work" data-de="Meine Arbeiten">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/32892083-copy-of-partnach2-38e0wVU5JyPH.jpg" alt="Pedestrian bridge image">
-                <div class="layer">
-                    <h3 data-en="Pedestrian bridge" data-de="Fußgängerbrücke">Pedestrian bridge</h3>
-                    <p data-en="Light weight steel truss design is made for the easy transpotation through helicopter during construction stages." 
-                        data-de="Leichtbau-Stahlfachwerk für den einfachen Transport per Hubschrauber während der Bauphase.">
-                        Light weight steel truss design is made for the easy transpotation through helicopter during construction stages.
-                    </p>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/Screenshot (1).png" alt="Eigen Modes Extraction image">
-                <div class="layer">
-                    <h3 data-en="Eigen Modes Extraction" data-de="Eigenfrequenzanalyse">Eigen Modes Extraction</h3>
-                    <p data-en="Eigen frequency modes is extracted to determine the resonating frequency mode of the structure due to Wind induced vibrations." 
-                        data-de="Eigenfrequenzanalyse zur Bestimmung der Resonanzfrequenz der Struktur bei windinduzierten Schwingungen.">
-                        Eigen frequency modes is extracted to determine the resonating frequency mode of the structure due to Earthquake- or Wind induced vibrations.
-                    </p>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/animation.0040.png" alt="Wind flow simulation image">
-                <div class="layer">
-                    <h3 data-en="Wind flow" data-de="Windströmung">Wind flow</h3>
-                    <p data-en="Wind flow through structure is determined using VOF numerical approach." 
-                        data-de="Windströmung durch die Struktur wird mit der VOF-Methode numerisch bestimmt.">
-                        Wind flow through structure is determined using VOF numerical approach.
-                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills', event)" data-key="tab_skills">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience', event)" data-key="tab_experience">Experience</p>
+                        <p class="tab-links" onclick="openTab('education', event)" data-key="tab_education">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span data-key="skill_1_title">Structural Engineer</span><br><span class="text-light" data-key="skill_1_desc">Bridge Design, Multistorey Buildings, Steel Frame Halls, Pre- and Post-tension, Precast Structures</span></li>
+                            <li><span data-key="skill_2_title">Reinforcement Detail</span><br><span class="text-light" data-key="skill_2_desc">Reinforcement Detail Drawings using CAD, Reinforcement Material Estimation</span></li>
+                            <li><span data-key="skill_3_title">Project planning</span><br><span class="text-light" data-key="skill_3_desc">Project management, Cost Estimation, BIM-4D and 5D Planning, Plan approval</span></li>
+                            <li><span data-key="skill_4_title">Foundation Engineering</span><br><span class="text-light" data-key="skill_4_desc">Pilefoundation, Cassionfoundation, Embankments, Shallowfoundations</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br><span class="text-light" data-key="exp_1">Project Engineer at Obermeyer Gmbh</span></li>
+                            <li><span>2022 - 2023</span><br><span class="text-light" data-key="exp_2">Structural Engineer at OK Ingenieur Gmbh & Co.</span></li>
+                            <li><span>2014 - 2018</span><br><span class="text-light" data-key="exp_3">Structural Engineer in India</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2009-2014</span><br><span class="text-light" data-key="edu_1">BE+ME in Civil Engineering at Andhra University(A), India</span></li>
+                            <li><span>2018-2021</span><br><span class="text-light" data-key="edu_2">MSc in Natural Hazards and Risk in Structural Engineering (NHRE) at Bauhaus University, Germany</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/Screenshot_2.png" alt="HLK-HH-BER">
-                <div class="layer">
-                    <h3 data-en="Shoring" data-de="Ausschaltung">Shoring</h3>
-                    <p data-en="Shoring design calculation during Bridge constrution for Teilproject-8 in HLK-Hamburg-Berlin" 
-                        data-de="Berechnung der Ausschalung für die Brückenkonstruktion im Teilprojekt-8 der HLK-Hamburg-Berlin">
-                        Shoring design calculation during Bridge constrution for Teilproject-8 in HLK-Hamburg-Berlin
-                    </p>
+    </section>
+
+    <!-- Services/Specialization Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="sub-title" data-key="services_title">My Specialization</h2>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-bridge"></i>
+                    <h3 data-key="service_1_title">Static Design</h3>
+                    <p data-key="service_1_desc">I have expertise in Static design verification using EC, ASCI and IS-codes for Permanent and Frequent load cases.</p>
+                    <a href="#" data-key="learn_more">Learn more</a>
                 </div>
-            </div>
-            <div class="work">
-                <img src="images/Screenshot_3_PPPA3.png" alt="Description for new project 2">
-                <div class="layer">
-                    <h3 data-en="Sound Barrier constructions" data-de="Lärmschutzwände">Sound Barrier constructions</h3>
-                    <p data-en="Conducted detailed inspections of sound barrier constructions along the German Autobahn A3 as part of a Public-Private Partnership (PPP) project." 
-                        data-de="Detaillierte Inspektion von Lärmschutzwänden entlang der deutschen Autobahn A3 im Rahmen eines Public-Private-Partnership (PPP)-Projekts.">
-                        Conducted detailed inspections of sound barrier constructions along the German Autobahn A3 as part of a Public-Private Partnership (PPP) project.
-                    </p>
+                <div>
+                    <i class="fa-solid fa-bridge fa-shake"></i>
+                    <h3 data-key="service_2_title">Dynamic Design</h3>
+                    <p data-key="service_2_desc">I have expertise in Dynamic design verification using EC, ASCI (FEMA) and IS-codes for Dynamic loads like Earthquake- or Wind Induced vibrations.</p>
+                    <a href="#" data-key="learn_more">Learn more</a>
                 </div>
-            </div>
-            <div class="work">
-                <img src="images/Screenshot_4_FBQ.png" alt="Description for new project 3">
-                <div class="layer">
-                    <h3 data-en="Fehmarnbelt between Denmark and Germany" data-de="Fehmarnbelt zwischen Dänemark und Deutschland">Fehmarnbelt between Denmark and Germany</h3>
-                    <p data-en="Contributed to the Fehmarnbelt project by designing the signal mast and its foundation in accordance with RIL and EN standards." 
-                        data-de="Mitwirkung am Fehmarnbelt-Projekt durch die Planung des Signalmastes und seiner Gründung gemäß RIL- und EN-Normen.">
-                        Contributed to the Fehmarnbelt project by designing the signal mast and its foundation in accordance with RIL and EN standards.
-                    </p>
+                <div>
+                    <i class="fa-solid fa-bridge-water"></i>
+                    <h3 data-key="service_3_title">Fluid Structure Interaction</h3>
+                    <p data-key="service_3_desc">The study emphasises on real time structure behaviour using water as liquid damper reducing structure vibrations. Fluid damper design is made based on this phenomenon.</p>
+                    <a href="#" data-key="learn_more">Learn more</a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn" data-en="See more" data-de="Mehr anzeigen">See more</a>
-    </div>
-</div>
-<!----------------contact-------------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title" data-en="Contact Me" data-de="Kontakt">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> buddhiraju.sreekanth@gmail.com</p>
-                <div class="social-icon">
-                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="sub-title" data-key="portfolio_title">My Work</h2>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/32892083-copy-of-partnach2-38e0wVU5JyPH.jpg" alt="Pedestrian bridge">
+                    <div class="layer">
+                        <h3 data-key="work_1_title">Pedestrian bridge</h3>
+                        <p data-key="work_1_desc">Light weight steel truss design is made for the easy transpotation through helicopter during construction stages.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Screenshot (1).png" alt="Eigen Modes Extraction">
+                    <div class="layer">
+                        <h3 data-key="work_2_title">Eigen Modes Extraction</h3>
+                        <p data-key="work_2_desc">Eigen frequency modes is extracted to determine the resonating frequency mode of the structure due to Wind induced vibrations.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/animation.0040.png" alt="Wind flow simulation">
+                    <div class="layer">
+                        <h3 data-key="work_3_title">Wind flow</h3>
+                        <p data-key="work_3_desc">Wind flow through structure is determined using VOF numerical approach.</p>
+                    </div>
+                </div>
+                 <div class="work">
+                    <img src="images/Screenshot_2.png" alt="Bridge Shoring Design for HLK-Hamburg-Berlin">
+                    <div class="layer">
+                        <h3 data-key="work_4_title">Shoring</h3>
+                        <p data-key="work_4_desc">Shoring design calculation during Bridge constrution for Teilproject-8 in HLK-Hamburg-Berlin</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Screenshot_3_PPPA3.png" alt="Sound Barrier construction inspection on German Autobahn A3">
+                    <div class="layer">
+                        <h3 data-key="work_5_title">Sound Barrier constructions</h3>
+                        <p data-key="work_5_desc">Conducted detailed inspections of sound barrier constructions along the German Autobahn A3 as part of a Public-Private Partnership (PPP) project.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Screenshot_4_FBQ.png" alt="Fehmarnbelt project signal mast design">
+                    <div class="layer">
+                        <h3 data-key="work_6_title">Fehmarnbelt between Denmark and Germany</h3>
+                        <p data-key="work_6_desc">Contributed to the Fehmarnbelt project by designing the signal mast and its foundation in accordance with RIL and EN standards.</p>
+                    </div>
+                </div>
             </div>
-            <a href="images/Sreekanth-Buddhiraju-Projektliste.pdf" download class="btn btn2" data-en="Download Projects" data-de="Projekte herunterladen">Download Projects</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" data-en="Your Name" data-de="Ihr Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" data-en="Your Email" data-de="Ihre E-Mail" required>
-                    <textarea name="Message" rows="10" placeholder="Your Message" data-en="Your Message" data-de="Ihre Nachricht"></textarea>
-                    <button type="submit" class="btn btn2" data-en="Submit" data-de="Absenden">Submit</button>
-                </form>
-                <span id="msg" data-en="Message sent successfully" data-de="Nachricht erfolgreich gesendet"></span>
+            <a href="#" class="btn" data-key="see_more">See more</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2 class="sub-title" data-key="contact_title">Contact Me</h2>
+                    <p><i class="fa-solid fa-paper-plane"></i> buddhiraju.sreekanth@gmail.com</p>
+                    <div class="social-icon">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/123456789" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <a href="images/Sreekanth-Buddhiraju-Projektliste.pdf" download class="btn btn2" data-key="download_projects">Download Projects</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <label for="name" class="sr-only" data-key="form_name_label">Your Name</label>
+                        <input type="text" id="name" name="Name" placeholder="Your Name" data-key="form_name_placeholder" required>
+                        
+                        <label for="email" class="sr-only" data-key="form_email_label">Your Email</label>
+                        <input type="email" id="email" name="Email" placeholder="Your Email" data-key="form_email_placeholder" required>
+                        
+                        <label for="message" class="sr-only" data-key="form_message_label">Your Message</label>
+                        <textarea id="message" name="Message" rows="10" placeholder="Your Message" data-key="form_message_placeholder"></textarea>
+                        
+                        <button type="submit" class="btn btn2" data-key="form_submit">Submit</button>
+                    </form>
+                    <span id="msg" data-key-success="form_success" data-en-text="Message sent successfully" data-de-text="Nachricht erfolgreich gesendet"></span>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-    <p data-en="Copyright © Sreekanth Buddhiraju. Düsseldorf, Germany" 
-       data-de="Urheberrecht © Sreekanth Buddhiraju. Düsseldorf, Deutschland">
-       Copyright © Sreekanth Buddhiraju. Düsseldorf, Germany
-    </p>
-    </div>
-</div>
+    </section>
+</main>
+
+<footer class="copyright">
+    <p data-key="copyright">Copyright © Sreekanth Buddhiraju. Düsseldorf, Germany</p>
+</footer>
 
 <script>
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+// --- Translations Dictionary ---
+const translations = {
+    en: {
+        nav_home: "Home",
+        nav_about: "About",
+        nav_services: "Specialization",
+        nav_portfolio: "Portfolio",
+        nav_contact: "Contact",
+        header_subtitle: "Structural Engineer",
+        header_title: "Hi, I'm <span>Sreekanth</span><br> Buddhiraju working as a Project Engineer",
+        about_title: "About Me",
+        about_desc: "Civil engineer with more than 7+ years of experience in structural engineering, project management and construction planning. I am always eager to find a better solution method and learn new technologies, tools and language skills when required. At present I am working as a Project Engineer in Germany.",
+        tab_skills: "Skills",
+        tab_experience: "Experience",
+        tab_education: "Education",
+        skill_1_title: "Structural Engineer",
+        skill_1_desc: "Bridge Design, Multistorey Buildings, Steel Frame Halls, Pre- and Post-tension, Precast Structures",
+        skill_2_title: "Reinforcement Detail",
+        skill_2_desc: "Reinforcement Detail Drawings using CAD, Reinforcement Material Estimation",
+        skill_3_title: "Project planning",
+        skill_3_desc: "Project management, Cost Estimation, BIM-4D and 5D Planning, Plan approval",
+        skill_4_title: "Foundation Engineering",
+        skill_4_desc: "Pilefoundation, Cassionfoundation, Embankments, Shallowfoundations",
+        exp_1: "Project Engineer at Obermeyer Gmbh",
+        exp_2: "Structural Engineer at OK Ingenieur Gmbh & Co.",
+        exp_3: "Structural Engineer in India",
+        edu_1: "BE+ME in Civil Engineering at Andhra University(A), India",
+        edu_2: "MSc in Natural Hazards and Risk in Structural Engineering (NHRE) at Bauhaus University, Germany",
+        services_title: "My Specialization",
+        service_1_title: "Static Design",
+        service_1_desc: "I have expertise in Static design verification using EC, ASCI and IS-codes for Permanent and Frequent load cases.",
+        service_2_title: "Dynamic Design",
+        service_2_desc: "I have expertise in Dynamic design verification using EC, ASCI (FEMA) and IS-codes for Dynamic loads like Earthquake- or Wind Induced vibrations.",
+        service_3_title: "Fluid Structure Interaction",
+        service_3_desc: "The study emphasises on real time structure behaviour using water as liquid damper reducing structure vibrations. Fluid damper design is made based on this phenomenon.",
+        learn_more: "Learn more",
+        portfolio_title: "My Work",
+        work_1_title: "Pedestrian bridge",
+        work_1_desc: "Light weight steel truss design is made for the easy transpotation through helicopter during construction stages.",
+        work_2_title: "Eigen Modes Extraction",
+        work_2_desc: "Eigen frequency modes is extracted to determine the resonating frequency mode of the structure due to Wind induced vibrations.",
+        work_3_title: "Wind flow",
+        work_3_desc: "Wind flow through structure is determined using VOF numerical approach.",
+        work_4_title: "Shoring",
+        work_4_desc: "Shoring design calculation during Bridge constrution for Teilproject-8 in HLK-Hamburg-Berlin",
+        work_5_title: "Sound Barrier constructions",
+        work_5_desc: "Conducted detailed inspections of sound barrier constructions along the German Autobahn A3 as part of a Public-Private Partnership (PPP) project.",
+        work_6_title: "Fehmarnbelt between Denmark and Germany",
+        work_6_desc: "Contributed to the Fehmarnbelt project by designing the signal mast and its foundation in accordance with RIL and EN standards.",
+        see_more: "See more",
+        contact_title: "Contact Me",
+        download_projects: "Download Projects",
+        form_name_label: "Your Name",
+        form_name_placeholder: "Your Name",
+        form_email_label: "Your Email",
+        form_email_placeholder: "Your Email",
+        form_message_label: "Your Message",
+        form_message_placeholder: "Your Message",
+        form_submit: "Submit",
+        form_success: "Message sent successfully",
+        copyright: "Copyright © Sreekanth Buddhiraju. Düsseldorf, Germany"
+    },
+    de: {
+        nav_home: "Startseite",
+        nav_about: "Über mich",
+        nav_services: "Spezialisierung",
+        nav_portfolio: "Portfolio",
+        nav_contact: "Kontakt",
+        header_subtitle: "Bauingenieur",
+        header_title: "Hallo, ich bin <span>Sreekanth</span><br> Buddhiraju und arbeite als Projektingenieur",
+        about_title: "Über mich",
+        about_desc: "Bauingenieur mit mehr als 7+ Jahren Erfahrung in Statik, Projektmanagement und Bauplanung. Ich bin stets bestrebt, bessere Lösungsmethoden zu finden und neue Technologien, Werkzeuge und Sprachkenntnisse zu erlernen, wenn es erforderlich ist. Derzeit arbeite ich als Projektingenieur in Deutschland.",
+        tab_skills: "Fähigkeiten",
+        tab_experience: "Berufserfahrung",
+        tab_education: "Ausbildung",
+        skill_1_title: "Statiker",
+        skill_1_desc: "Brückenbau, Mehrgeschossige Gebäude, Stahlhallen, Vorspannung, Fertigteile",
+        skill_2_title: "Bewehrungsplanung",
+        skill_2_desc: "Bewehrungspläne mit CAD, Bewehrungsmengenermittlung",
+        skill_3_title: "Projektplanung",
+        skill_3_desc: "Projektmanagement, Kostenermittlung, BIM-4D und 5D Planung, Plan Prüfung",
+        skill_4_title: "Gründungsbau",
+        skill_4_desc: "Bohrpfähl, Cassion-Fundament, Stützwand, Flachgründungen",
+        exp_1: "Projektingenieur bei Obermeyer Gmbh",
+        exp_2: "Statiker bei OK Ingenieur Gmbh & Co.",
+        exp_3: "Statiker in Indien",
+        edu_1: "BE+ME in Bauingenieurwesen an der Andhra University(A), Indien",
+        edu_2: "MSc in Natural Hazards and Risk in Structural Engineering (NHRE) an der Bauhaus-Universität, Deutschland",
+        services_title: "Meine Spezialisierung",
+        service_1_title: "Statische Berechnung",
+        service_1_desc: "Ich habe Erfahrung in der statischen Berechnung nach DIN-EN, ASCI und IS-Normen für ständige und häufige Lastfälle.",
+        service_2_title: "Dynamische Berechnung",
+        service_2_desc: "Ich habe Erfahrung in der dynamischen Berechnung nach EC, ASCI (FEMA) und IS-Normen für dynamische Lasten wie Erdbeben- oder windinduzierte Schwingungen.",
+        service_3_title: "Fluid-Struktur-Interaktion",
+        service_3_desc: "Die Studie konzentriert sich auf das Echtzeit-Verhalten von Strukturen unter Verwendung von Wasser als Flüssigkeitsdämpfer zur Reduzierung von Strukturschwingungen. Der Flüssigkeitsdämpfer wird auf Basis dieses Phänomens ausgelegt.",
+        learn_more: "Mehr erfahren",
+        portfolio_title: "Meine Arbeiten",
+        work_1_title: "Fußgängerbrücke",
+        work_1_desc: "Leichtbau-Stahlfachwerk für den einfachen Transport per Hubschrauber während der Bauphase.",
+        work_2_title: "Eigenfrequenzanalyse",
+        work_2_desc: "Eigenfrequenzanalyse zur Bestimmung der Resonanzfrequenz der Struktur bei windinduzierten Schwingungen.",
+        work_3_title: "Windströmung",
+        work_3_desc: "Windströmung durch die Struktur wird mit der VOF-Methode numerisch bestimmt.",
+        work_4_title: "Ausschalung",
+        work_4_desc: "Berechnung der Ausschalung für die Brückenkonstruktion im Teilprojekt-8 der HLK-Hamburg-Berlin",
+        work_5_title: "Lärmschutzwände",
+        work_5_desc: "Detaillierte Inspektion von Lärmschutzwänden entlang der deutschen Autobahn A3 im Rahmen eines Public-Private-Partnership (PPP)-Projekts.",
+        work_6_title: "Fehmarnbelt zwischen Dänemark und Deutschland",
+        work_6_desc: "Mitwirkung am Fehmarnbelt-Projekt durch die Planung des Signalmastes und seiner Gründung gemäß RIL- und EN-Normen.",
+        see_more: "Mehr anzeigen",
+        contact_title: "Kontakt",
+        download_projects: "Projekte herunterladen",
+        form_name_label: "Ihr Name",
+        form_name_placeholder: "Ihr Name",
+        form_email_label: "Ihre E-Mail",
+        form_email_placeholder: "Ihre E-Mail",
+        form_message_label: "Ihre Nachricht",
+        form_message_placeholder: "Ihre Nachricht",
+        form_submit: "Absenden",
+        form_success: "Nachricht erfolgreich gesendet",
+        copyright: "Urheberrecht © Sreekanth Buddhiraju. Düsseldorf, Deutschland"
+    }
+};
 
-function opentab(tabname, event) {
-    for (tablink of tablinks) {
+// --- Tab Functionality ---
+const tablinks = document.getElementsByClassName("tab-links");
+const tabcontents = document.getElementsByClassName("tab-contents");
+
+function openTab(tabname, event) {
+    for (let tablink of tablinks) {
         tablink.classList.remove("active-link");
     }
-    for (tabcontent of tabcontents) {
+    for (let tabcontent of tabcontents) {
         tabcontent.classList.remove("active-tab");
     }
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add('active-tab');
 }
 
-// Language switching functionality
+// --- Language Switching Functionality ---
 document.addEventListener('DOMContentLoaded', function() {
     const langEnBtn = document.getElementById('lang-en');
     const langDeBtn = document.getElementById('lang-de');
-    
-    langEnBtn.addEventListener('click', function() {
-        changeLanguage('en');
-        langEnBtn.classList.add('active-lang');
-        langDeBtn.classList.remove('active-lang');
-    });
-    
-    langDeBtn.addEventListener('click', function() {
-        changeLanguage('de');
-        langDeBtn.classList.add('active-lang');
-        langEnBtn.classList.remove('active-lang');
-    });
-});
+    const translatableElements = document.querySelectorAll('[data-key]');
+    let currentLang = 'en'; // Default language
 
-function changeLanguage(lang) {
-    // Get all elements with data attributes for translation
-    const elements = document.querySelectorAll('[data-en], [data-de]');
-    
-    elements.forEach(element => {
-        if (element.hasAttribute(`data-${lang}`)) {
-            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = element.getAttribute(`data-${lang}`);
-            } else if (element.tagName === 'IMG') {
-                element.alt = element.getAttribute(`data-${lang}`);
-            } else {
-                // For elements with HTML inside (like the header text)
-                if (element.innerHTML.includes('<span>')) {
-                    const newContent = element.getAttribute(`data-${lang}`);
-                    element.innerHTML = newContent;
+    function setLanguage(lang) {
+        // Set the lang attribute on the root <html> element for accessibility
+        document.documentElement.lang = lang;
+        currentLang = lang;
+
+        translatableElements.forEach(element => {
+            const key = element.getAttribute('data-key');
+            const translation = translations[lang][key];
+
+            if (translation !== undefined) {
+                 if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    // Handle placeholders for form elements
+                    const placeholderKey = element.getAttribute('data-key') + '_placeholder';
+                    const placeholderText = translations[lang][placeholderKey];
+                    if(placeholderText) element.placeholder = placeholderText;
                 } else {
-                    element.textContent = element.getAttribute(`data-${lang}`);
+                    // For all other elements, including those with HTML tags like <span>
+                    element.innerHTML = translation;
                 }
             }
-        }
-    });
-    
-    // Special handling for the message span
-    const msgSpan = document.getElementById('msg');
-    if (msgSpan.textContent.trim() === "Message sent successfully") {
-        msgSpan.textContent = lang === 'en' ? "Message sent successfully" : "Nachricht erfolgreich gesendet";
-    } else if (msgSpan.textContent.trim() === "Nachricht erfolgreich gesendet") {
-        msgSpan.textContent = lang === 'en' ? "Message sent successfully" : "Nachricht erfolgreich gesendet";
+        });
+
+        // Update active button style
+        langEnBtn.classList.toggle('active-lang', lang === 'en');
+        langDeBtn.classList.toggle('active-lang', lang === 'de');
     }
-}
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycby5Zdyjn7oE0AJaP4GFbOYAIU41LnOo2hT6DmJJ0Zjy4b_gzL9q-PGs7zEGpdTDq_lF/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
+
+    langEnBtn.addEventListener('click', () => setLanguage('en'));
+    langDeBtn.addEventListener('click', () => setLanguage('de'));
+    
+    // Initial language setup
+    setLanguage(currentLang);
+
+
+    // --- Form Submission Logic ---
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby5Zdyjn7oE0AJaP4GFbOYAIU41LnOo2hT6DmJJ0Zjy4b_gzL9q-PGs7zEGpdTDq_lF/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
 
     form.addEventListener('submit', e => {
-      e.preventDefault()
+      e.preventDefault();
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            msg.innerHTML = document.documentElement.lang === 'en' ? 
-                "Message sent successfully" : "Nachricht erfolgreich gesendet";
-            setTimeout(function(){
-                msg.innerHTML=""
-            },5000)
-            form.reset()
+            // Get the success message from the dictionary based on the current language
+            msg.textContent = translations[currentLang]['form_success'];
+            setTimeout(() => {
+                msg.textContent = "";
+            }, 5000);
+            form.reset();
         })
-        .catch(error => console.error('Error!', error.message))
-    })
+        .catch(error => console.error('Error!', error.message));
+    });
+});
 </script>
 </body>
 </html>
