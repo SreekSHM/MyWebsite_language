@@ -6,7 +6,7 @@
     --secondary-color: #262626;
     --bg-color: #080808;
     --text-color: #fff;
-    --text-light-color: #abacad;
+    --text-light-color: #abacad; /* This is used for non-red text */
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -184,7 +184,8 @@ nav {
 /* =============================================
    4. SECTIONS (About, Services, Portfolio, Contact)
    ============================================= */
-/* --- About Section --- */
+
+/* --- About Section (UPDATED) --- */
 #about {
     padding: 60px 0;
 }
@@ -209,6 +210,10 @@ nav {
     flex-basis: 100%;
 }
 
+.about-col-2 .sub-title {
+    margin-bottom: 30px;
+}
+
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
@@ -217,9 +222,17 @@ nav {
 .tab-links {
     margin-right: 50px;
     font-size: 1.1rem;
-    font-weight: 500;
     cursor: pointer;
     position: relative;
+    font-weight: 400; /* Removed bold font-weight */
+    color: var(--text-color); /* Set font color to white */
+    opacity: 0.7; /* Makes non-active tabs slightly transparent */
+    transition: opacity 0.3s ease;
+}
+
+.tab-links:hover,
+.tab-links.active-link {
+    opacity: 1; /* Return to full opacity when hovered or active */
 }
 
 .tab-links::after {
@@ -239,17 +252,21 @@ nav {
 
 .tab-contents ul li {
     list-style: none;
-    margin: 10px 0;
+    margin: 20px 0; /* Increased margin to match image spacing */
 }
 
+/* Style for the main skill title e.g., "Structural Engineer" */
 .tab-contents ul li span {
-    color: var(--primary-color);
-    font-size: 1rem;
+    color: var(--primary-color); /* Ensures this is red */
+    font-size: 1.1rem;
     font-weight: 600;
 }
-.text-light {
-    color: var(--text-light-color);
-    font-weight: 400;
+
+/* Style for the skill description text within the about section */
+#about .text-light {
+    display: block; /* Ensures it appears on the next line */
+    font-weight: 400; /* Normal font weight */
+    color: var(--primary-color); /* Overrides the default grey to be red */
 }
 
 .tab-contents {
@@ -259,6 +276,7 @@ nav {
 .tab-contents.active-tab {
     display: block;
 }
+
 
 /* --- Services Section --- */
 #services {
