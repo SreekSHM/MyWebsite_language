@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreekanth Buddhiraju Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-6s5/mK6e5PON07LrH1CzJcUA6lXEXeoIl2Fbz4zI+1/i5ZpfL+QkF+MJs4+GYYPP" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c6ae28cfd0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/sb-high-resolution-logo-white-transparent.png" class="logo">
+            <div class="language-switcher">
+                <button id="lang-en" class="lang-btn active-lang">EN</button>
+                <button id="lang-de" class="lang-btn">DE</button>
+            </div>
+            <ul>
+                <li><a href="#header" data-en="Home" data-de="Startseite">Home</a></li>
+                <li><a href="#about" data-en="About" data-de="Über mich">About</a></li>
+                <li><a href="#services" data-en="Specialization" data-de="Spezialisierung">Specialization</a></li>
+                <li><a href="#portfolio" data-en="Portfolio" data-de="Portfolio">Portfolio</a></li>
+                <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
+                <i class="fas fa-xmark"></i>
+            </ul>
+            <i class="fas fa-bars"></i>
+        </nav>
+        <div class="header-text">
+            <p data-en="Structural Engineer" data-de="Bauingenieur">Structural Engineer</p>
+            <h1 data-en="Hi, I'm <span>Sreekanth</span><br> Buddhiraju working as a Project Engineer" 
+                data-de="Hallo, ich bin <span>Sreekanth</span><br> Buddhiraju und arbeite als Projektingenieur">
+                Hi, I'm <span>Sreekanth</span><br> Buddhiraju working as a Project Engineer
+            </h1>
+        </div>
+    </div>
+</div>
+<!-- about -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Sreekanth-Buddhiraju-image.jpg" alt="Sreekanth Buddhiraju">
+            </div>
+            <div class="about-col-2">
+                <h1 data-en="About Me" data-de="Über mich">About Me</h1>
+                <p data-en="Civil engineer with more than 7+ years of experience in structural engineering, project management and construction planning. 
+                    I am always eager to find a better solution method and learn new technologies, tools and language skills when required. 
+                    At present I am working as a Project Engineer in Germany." 
+                    data-de="Bauingenieur mit mehr als 7+ Jahren Erfahrung in Statik, Projektmanagement und Bauplanung. 
+                    Ich bin stets bestrebt, bessere Lösungsmethoden zu finden und neue Technologien, Werkzeuge und Sprachkenntnisse zu erlernen, wenn es erforderlich ist. 
+                    Derzeit arbeite ich als Projektingenieur in Deutschland.">
+                    Civil engineer with more than 7+ years of experience in structural engineering, project management and construction planning. 
+                    I am always eager to find a better solution method and learn new technologies, tools and language skills when required. 
+                    At present I am working as a Project Engineer in Germany.
+                </p>
+             <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills', event)" data-en="Skills" data-de="Fähigkeiten">Skills</p>
+                <p class="tab-links" onclick="opentab('experience', event)" data-en="Experience" data-de="Berufserfahrung">Experience</p>
+                <p class="tab-links" onclick="opentab('education', event)" data-en="Education" data-de="Ausbildung">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <li>
+                <span data-en="Structural Engineer" data-de="Statiker">Structural Engineer</span><br>
+                <span style="color: white;" data-en="Bridge Design, Multistorey Buildings, Steel Frame Halls, Pre- and Post-tension, Precast Structures" 
+                  data-de="Brückenbau, Mehrgeschossige Gebäude, Stahlhallen, Vorspannung, Fertigteile">
+                  Bridge Design, Multistorey Buildings, Steel Frame Halls, Pre- and Post-tension, Precast Structures
+                </span>
+                </li>
+                <li>
+            <span data-en="Reinforcement Detail" data-de="Bewehrungsplanung">Reinforcement Detail</span><br>
+            <span style="color: white;" data-en="Reinforcement Detail Drawings using CAD, Reinforcement Material Estimation" 
+                  data-de="Bewehrungspläne mit CAD, Bewehrungsmengenermittlung">
+                  Reinforcement Detail Drawings using CAD, Reinforcement Material Estimation
+            </span>
+            </li>
+            <li>
+            <span data-en="Project planning" data-de="Projektplanung">Project planning</span><br>
+            <span style="color: white;" data-en="Project management, Cost Estimation, BIM-4D and 5D Planning, Plan approval" 
+                  data-de="Projektmanagement, Kostenermittlung, BIM-4D und 5D Planung, Plan Prüfung">
+                  Project management, Cost Estimation, BIM-4D and 5D Planning, Plan approval
+            </span>
+            </li>
+            <li>
+            <span data-en="Foundation Engineering" data-de="Gründungsbau">Foundation Engineering</span><br>
+            <span style="color: white;" data-en="Pilefoundation, Cassionfoundation, Embankments, Shallowfoundations" 
+                  data-de="Bohrpfähl, Cassion-Fundament, Stützwand, Flachgründungen">
+                  Pilefoundation, Cassionfoundation, Embankments, Shallowfoundations
+            </span>
+            </li>
+            </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+            <ul>
+            <li>
+            <span>2024 - Current</span><br>
+            <span style="color: white;" data-en="Project Engineer at Obermeyer Gmbh" 
+                  data-de="Projektingenieur bei Obermeyer Gmbh">
+                  Project Engineer at Obermeyer Gmbh
+            </span>
+            </li>
+            <li>
+            <span>2022 - 2023</span><br>
+            <span style="color: white;" data-en="Structural Engineer at OK Ingenieur Gmbh & Co." 
+                  data-de="Statiker bei OK Ingenieur Gmbh & Co.">
+                  Structural Engineer at OK Ingenieur Gmbh & Co.
+            </span>
+            </li>
+            <li>
+            <span>2014 - 2018</span><br>
+            <span style="color: white;" data-en="Structural Engineer in India" 
+                  data-de="Statiker in Indien">
+                  Structural Engineer in India
+            </span>
+            </li>
+            </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+            <ul>
+                <li><span>2009-2014</span><br>
+                    <span style="color: white;" data-en="BE+ME in Civil Engineering at Andhra University(A), India" 
+                    data-de="BE+ME in Bauingenieurwesen an der Andhra University(A), Indien">BE+ME in Civil Engineering at Andhra University(A), India</li>
+                <li><span>2018-2021</span><br>
+                    <span style="color: white;" data-en="MSc in Natural Hazards and Risk in Structural Engineering (NHRE) at Bauhaus University, Germany" 
+                    data-de="MSc in Natural Hazards and Risk in Structural Engineering (NHRE) an der Bauhaus-Universität, Deutschland">MSc in Natural Hazards and Risk in Structural Engineering (NHRE) at Bauhaus University, Germany</li>
+            </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------services--------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title" data-en="My Specialization" data-de="Meine Spezialisierung">My Specialization</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-bridge"></i>
+                <h2 data-en="Static Design" data-de="Statische Berechnung">Static Design</h2>
+                <p data-en="I have expertise in Static design verification using EC, ASCI and IS-codes for Permanent and Frequent load cases." 
+                    data-de="Ich habe Erfahrung in der statischen Berechnung nach DIN-EN, ASCI und IS-Normen für ständige und häufige Lastfälle.">
+                    I have expertise in Static design verification using EC, ASCI and IS-codes for Permanent and Frequent load cases.
+                </p>
+                <a href="#" data-en="Learn more" data-de="Mehr erfahren">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-bridge fa-shake"></i>
+                <h2 data-en="Dynamic Design" data-de="Dynamische Berechnung">Dynamic Design</h2>
+                <p data-en="I have expertise in Dynamic design verification using EC, ASCI (FEMA) and IS-codes for Dynamic loads like Earthquake- or Wind Induced vibrations." 
+                    data-de="Ich habe Erfahrung in der dynamischen Berechnung nach EC, ASCI (FEMA) und IS-Normen für dynamische Lasten wie Erdbeben- oder windinduzierte Schwingungen.">
+                    I have expertise in Dynamic design verification using EC, ASCI (FEMA) and IS-codes for Dynamic loads like Earthquake- or Wind Induced vibrations.
+                </p>
+                <a href="#" data-en="Learn more" data-de="Mehr erfahren">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-bridge-water"></i>
+                <h2 data-en="Fluid Structure Interaction" data-de="Fluid-Struktur-Interaktion">Fluid Structure Interaction</h2>
+                <p data-en="The study emphasises on real time structure behaviour using water as liquid damper reducing structure vibrations. Fluid damper design is made based on this phenomenon." 
+                    data-de="Die Studie konzentriert sich auf das Echtzeit-Verhalten von Strukturen unter Verwendung von Wasser als Flüssigkeitsdämpfer zur Reduzierung von Strukturschwingungen. Der Flüssigkeitsdämpfer wird auf Basis dieses Phänomens ausgelegt.">
+                    The study emphasises on real time structure behaviour using water as liquid damper reducing structure vibrations. Fluid damper design is made based on this phenomenon.
+                </p>
+                <a href="#" data-en="Learn more" data-de="Mehr erfahren">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------portfolio----------------------> 
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title" data-en="My Work" data-de="Meine Arbeiten">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/32892083-copy-of-partnach2-38e0wVU5JyPH.jpg" alt="Pedestrian bridge image">
+                <div class="layer">
+                    <h3 data-en="Pedestrian bridge" data-de="Fußgängerbrücke">Pedestrian bridge</h3>
+                    <p data-en="Light weight steel truss design is made for the easy transpotation through helicopter during construction stages." 
+                        data-de="Leichtbau-Stahlfachwerk für den einfachen Transport per Hubschrauber während der Bauphase.">
+                        Light weight steel truss design is made for the easy transpotation through helicopter during construction stages.
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Screenshot (1).png" alt="Eigen Modes Extraction image">
+                <div class="layer">
+                    <h3 data-en="Eigen Modes Extraction" data-de="Eigenfrequenzanalyse">Eigen Modes Extraction</h3>
+                    <p data-en="Eigen frequency modes is extracted to determine the resonating frequency mode of the structure due to Wind induced vibrations." 
+                        data-de="Eigenfrequenzanalyse zur Bestimmung der Resonanzfrequenz der Struktur bei windinduzierten Schwingungen.">
+                        Eigen frequency modes is extracted to determine the resonating frequency mode of the structure due to Earthquake- or Wind induced vibrations.
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/animation.0040.png" alt="Wind flow simulation image">
+                <div class="layer">
+                    <h3 data-en="Wind flow" data-de="Windströmung">Wind flow</h3>
+                    <p data-en="Wind flow through structure is determined using VOF numerical approach." 
+                        data-de="Windströmung durch die Struktur wird mit der VOF-Methode numerisch bestimmt.">
+                        Wind flow through structure is determined using VOF numerical approach.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Screenshot_2.png" alt="HLK-HH-BER">
+                <div class="layer">
+                    <h3 data-en="Shoring" data-de="Ausschaltung">Shoring</h3>
+                    <p data-en="Shoring design calculation during Bridge constrution for Teilproject-8 in HLK-Hamburg-Berlin" 
+                        data-de="Berechnung der Ausschalung für die Brückenkonstruktion im Teilprojekt-8 der HLK-Hamburg-Berlin">
+                        Shoring design calculation during Bridge constrution for Teilproject-8 in HLK-Hamburg-Berlin
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Screenshot_3_PPPA3.png" alt="Description for new project 2">
+                <div class="layer">
+                    <h3 data-en="Sound Barrier constructions" data-de="Lärmschutzwände">Sound Barrier constructions</h3>
+                    <p data-en="Conducted detailed inspections of sound barrier constructions along the German Autobahn A3 as part of a Public-Private Partnership (PPP) project." 
+                        data-de="Detaillierte Inspektion von Lärmschutzwänden entlang der deutschen Autobahn A3 im Rahmen eines Public-Private-Partnership (PPP)-Projekts.">
+                        Conducted detailed inspections of sound barrier constructions along the German Autobahn A3 as part of a Public-Private Partnership (PPP) project.
+                    </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Screenshot_4_FBQ.png" alt="Description for new project 3">
+                <div class="layer">
+                    <h3 data-en="Fehmarnbelt between Denmark and Germany" data-de="Fehmarnbelt zwischen Dänemark und Deutschland">Fehmarnbelt between Denmark and Germany</h3>
+                    <p data-en="Contributed to the Fehmarnbelt project by designing the signal mast and its foundation in accordance with RIL and EN standards." 
+                        data-de="Mitwirkung am Fehmarnbelt-Projekt durch die Planung des Signalmastes und seiner Gründung gemäß RIL- und EN-Normen.">
+                        Contributed to the Fehmarnbelt project by designing the signal mast and its foundation in accordance with RIL and EN standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn" data-en="See more" data-de="Mehr anzeigen">See more</a>
+    </div>
+</div>
+<!----------------contact-------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title" data-en="Contact Me" data-de="Kontakt">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> buddhiraju.sreekanth@gmail.com</p>
+                <div class="social-icon">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <a href="images/Sreekanth-Buddhiraju-Projektliste.pdf" download class="btn btn2" data-en="Download Projects" data-de="Projekte herunterladen">Download Projects</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" data-en="Your Name" data-de="Ihr Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" data-en="Your Email" data-de="Ihre E-Mail" required>
+                    <textarea name="Message" rows="10" placeholder="Your Message" data-en="Your Message" data-de="Ihre Nachricht"></textarea>
+                    <button type="submit" class="btn btn2" data-en="Submit" data-de="Absenden">Submit</button>
+                </form>
+                <span id="msg" data-en="Message sent successfully" data-de="Nachricht erfolgreich gesendet"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+    <p data-en="Copyright © Sreekanth Buddhiraju. Düsseldorf, Germany" 
+       data-de="Urheberrecht © Sreekanth Buddhiraju. Düsseldorf, Deutschland">
+       Copyright © Sreekanth Buddhiraju. Düsseldorf, Germany
+    </p>
+    </div>
+</div>
+
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname, event) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add('active-tab');
+}
+
+// Language switching functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const langEnBtn = document.getElementById('lang-en');
+    const langDeBtn = document.getElementById('lang-de');
+    
+    langEnBtn.addEventListener('click', function() {
+        changeLanguage('en');
+        langEnBtn.classList.add('active-lang');
+        langDeBtn.classList.remove('active-lang');
+    });
+    
+    langDeBtn.addEventListener('click', function() {
+        changeLanguage('de');
+        langDeBtn.classList.add('active-lang');
+        langEnBtn.classList.remove('active-lang');
+    });
+});
+
+function changeLanguage(lang) {
+    // Get all elements with data attributes for translation
+    const elements = document.querySelectorAll('[data-en], [data-de]');
+    
+    elements.forEach(element => {
+        if (element.hasAttribute(`data-${lang}`)) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = element.getAttribute(`data-${lang}`);
+            } else if (element.tagName === 'IMG') {
+                element.alt = element.getAttribute(`data-${lang}`);
+            } else {
+                // For elements with HTML inside (like the header text)
+                if (element.innerHTML.includes('<span>')) {
+                    const newContent = element.getAttribute(`data-${lang}`);
+                    element.innerHTML = newContent;
+                } else {
+                    element.textContent = element.getAttribute(`data-${lang}`);
+                }
+            }
+        }
+    });
+    
+    // Special handling for the message span
+    const msgSpan = document.getElementById('msg');
+    if (msgSpan.textContent.trim() === "Message sent successfully") {
+        msgSpan.textContent = lang === 'en' ? "Message sent successfully" : "Nachricht erfolgreich gesendet";
+    } else if (msgSpan.textContent.trim() === "Nachricht erfolgreich gesendet") {
+        msgSpan.textContent = lang === 'en' ? "Message sent successfully" : "Nachricht erfolgreich gesendet";
+    }
+}
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby5Zdyjn7oE0AJaP4GFbOYAIU41LnOo2hT6DmJJ0Zjy4b_gzL9q-PGs7zEGpdTDq_lF/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = document.documentElement.lang === 'en' ? 
+                "Message sent successfully" : "Nachricht erfolgreich gesendet";
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
